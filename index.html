@@ -1,20 +1,21 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML Assignment - Class 8</title>
+<title>COTH CODING</title>
 <style>
 body{
   font-family: Arial, sans-serif;
   margin:0;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  background: linear-gradient(120deg, #4facfe, #00f2fe);
 }
 header{
   background:#0b3d91;
   color:white;
   text-align:center;
-  padding:20px;
+  padding:25px;
+  animation: fadeDown 1s ease;
 }
 .container{
   width:90%;
@@ -25,8 +26,14 @@ header{
   background:white;
   padding:20px;
   margin:20px 0;
-  border-radius:12px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  border-radius:15px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  animation: fadeUp 1s ease;
+}
+.box:hover{
+  transform: translateY(-8px) scale(1.01);
+  box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
 h2{
   color:#0b3d91;
@@ -34,41 +41,43 @@ h2{
 ol,ul{
   margin-left:20px;
 }
-.code{
-  background:#f4f4f4;
-  padding:10px;
-  border-radius:8px;
-  font-size:14px;
-}
 img{
   width:100%;
-  border-radius:10px;
+  border-radius:12px;
+  transition: 0.4s;
+}
+img:hover{
+  transform: scale(1.04);
 }
 footer{
   text-align:center;
   background:#0b3d91;
   color:white;
-  padding:10px;
+  padding:12px;
+  margin-top:20px;
+}
+@keyframes fadeUp{
+  from{opacity:0; transform: translateY(40px);} 
+  to{opacity:1; transform: translateY(0);} 
+}
+
+@keyframes fadeDown{
+  from{opacity:0; transform: translateY(-40px);} 
+  to{opacity:1; transform: translateY(0);} 
 }
 </style>
 </head>
-
 <body>
-
 <header>
 <h1>Class 8 HTML Practical</h1>
-<p>Beautiful Simple Website</p>
+<p>Simple + Beautiful + Animated Website</p>
 </header>
-
 <div class="container">
-
 <div class="box">
 <h2>Q2.1 School Challenge</h2>
-<p><b>a)</b> Image tag: &lt;img&gt;</p>
+<p><b>a)</b> Image tag: img</p>
 <p><b>b)</b> Ordered list is best for rules.</p>
-
-<img src="https://via.placeholder.com/600x250" alt="School Event">
-
+<img src="coth fa.png" alt="School Event">
 <h3>Rules:</h3>
 <ol>
 <li>Be on time</li>
@@ -77,7 +86,6 @@ footer{
 <li>Maintain discipline</li>
 </ol>
 </div>
-
 <div class="box">
 <h2>Q2.2 Steps to Submit Assignment</h2>
 <p>Ordered list is used because steps must be in correct order.</p>
@@ -87,16 +95,11 @@ footer{
 <li>Click submit</li>
 </ol>
 </div>
-
 <div class="box">
 <h2>Q2.3 Improve Image Code</h2>
-<p>Limitation: No alt text.</p>
-<div class="code">
-&lt;img src="science.png" alt="Science Project" width="300"&gt;
+<p>Limitation: No alternative text.</p>
+<p>Improved: Add alt text to make website more user-friendly.</p>
 </div>
-<p>This makes the website user-friendly and accessible.</p>
-</div>
-
 <div class="box">
 <h2>Q2.4 Correct List</h2>
 <ul>
@@ -105,12 +108,9 @@ footer{
 <li>Monitor</li>
 </ul>
 </div>
-
 </div>
-
 <footer>
-<p>Created for Class 8 Practical</p>
+<p>Class code</p>
 </footer>
-
 </body>
 </html>
