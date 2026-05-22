@@ -1,56 +1,555 @@
-<!DOCTYPE html>
-<html lang="en">
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
+}
 
-<head>
+body{
+    background:#020617;
+    color:white;
+    overflow-x:hidden;
+}
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+#particles{
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-10;
+}
 
-<title>10 Months With Shonamuniii 🤍</title>
+.loader{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background:#020617;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    animation:loaderFade 1s ease forwards;
+    animation-delay:3s;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+.loader-content{
+    text-align:center;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+.loader-content h1{
+    font-size:4rem;
+    font-weight:800;
+    background:linear-gradient(to right,#ffffff,#d8b4fe,#93c5fd);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-<link rel="stylesheet" href="style.css">
+.loader-content p{
+    margin-top:15px;
+    color:#cbd5e1;
+}
 
-</head>
+.loading-bar{
+    width:300px;
+    height:8px;
+    background:rgba(255,255,255,0.08);
+    border-radius:50px;
+    overflow:hidden;
+    margin-top:25px;
+}
 
-<body>
+.loading-bar span{
+    display:block;
+    width:0%;
+    height:100%;
+    background:linear-gradient(to right,#c084fc,#60a5fa);
+    animation:load 3s linear forwards;
+}
 
-<div class="loader">
+@keyframes load{
+    100%{
+        width:100%;
+    }
+}
 
-    <div class="loader-content">
+@keyframes loaderFade{
+    to{
+        opacity:0;
+        visibility:hidden;
+    }
+}
 
-        <h1>Shonamuniii 🤍</h1>
+nav{
+    width:100%;
+    padding:25px 80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    backdrop-filter:blur(14px);
+    background:rgba(2,6,23,0.45);
+    border-bottom:1px solid rgba(255,255,255,0.05);
+}
 
-        <p>Loading memories...</p>
+.logo{
+    font-size:1.4rem;
+    font-weight:700;
+}
 
-        <div class="loading-bar">
-            <span></span>
-        </div>
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:40px;
+}
 
-    </div>
+nav ul li a{
+    text-decoration:none;
+    color:#e2e8f0;
+    transition:0.3s;
+}
 
-</div>
+nav ul li a:hover{
+    color:#c084fc;
+}
 
-<canvas id="particles"></canvas>
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:120px 100px;
+    position:relative;
+    gap:80px;
+    background:
+    linear-gradient(rgba(2,6,23,0.7),
+    rgba(2,6,23,0.9)),
+    url('images/beach.jpg');
 
-<nav>
+    background-size:cover;
+    background-position:center;
+}
 
-    <div class="logo">
-        Aashu ✨
-    </div>
+.overlay{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at top right,
+    rgba(124,58,237,0.25),
+    transparent 40%);
+}
 
-    <ul>
+.hero-left{
+    flex:1;
+    z-index:2;
+}
 
-        <li><a href="#home">Home</a></li>
+.hero-left h1{
+    font-size:5rem;
+    line-height:1.1;
+    font-weight:800;
+}
 
-        <li><a href="#timeline">Timeline</a></li>
+.hero-left h1 span{
+    background:linear-gradient(to right,#ffffff,#d8b4fe,#93c5fd);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        <li><a href="#memories">Memories</a></li>
+.hero-left p{
+    margin-top:30px;
+    line-height:2;
+    font-size:1.1rem;
+    color:#dbeafe;
+    max-width:650px;
+}
 
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    margin-top:40px;
+}
+
+.hero-buttons button{
+    padding:16px 32px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    transition:0.4s;
+}
+
+#exploreBtn{
+    background:white;
+    color:#020617;
+}
+
+#musicBtn{
+    background:rgba(255,255,255,0.08);
+    color:white;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.hero-buttons button:hover{
+    transform:translateY(-6px) scale(1.04);
+}
+
+.hero-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    z-index:2;
+}
+
+.glass-card{
+    width:100%;
+    max-width:500px;
+    background:rgba(255,255,255,0.08);
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:35px;
+    padding:45px;
+    backdrop-filter:blur(20px);
+    box-shadow:0 0 50px rgba(255,255,255,0.08);
+}
+
+.glass-card h2{
+    margin-bottom:35px;
+    font-size:2rem;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+.stat-box{
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    transition:0.4s;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+}
+
+.stat-box h3{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.stat-box p{
+    color:#cbd5e1;
+}
+
+.section-title{
+    text-align:center;
+    font-size:4rem;
+    margin-bottom:70px;
+    font-weight:700;
+}
+
+.timeline-section{
+    padding:120px 100px;
+}
+
+.timeline{
+    max-width:1000px;
+    margin:auto;
+    position:relative;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    width:3px;
+    height:100%;
+    background:rgba(255,255,255,0.08);
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    width:50%;
+    padding:30px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-dot{
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:white;
+    position:absolute;
+    top:40px;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot{
+    right:-9px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot{
+    left:-9px;
+}
+
+.timeline-content{
+    background:rgba(255,255,255,0.05);
+    padding:35px;
+    border-radius:30px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.4s;
+}
+
+.timeline-content:hover{
+    transform:scale(1.03);
+}
+
+.timeline-content h2{
+    margin-bottom:15px;
+    font-size:1.7rem;
+}
+
+.timeline-content p{
+    line-height:1.9;
+    color:#cbd5e1;
+}
+
+.memories-section{
+    padding:120px 100px;
+}
+
+.memory-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.memory-card{
+    height:350px;
+    border-radius:30px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:end;
+    transition:0.5s;
+    background-size:cover;
+    background-position:center;
+}
+
+.memory-card:hover{
+    transform:translateY(-10px) scale(1.03);
+}
+
+.card1{
+    background-image:url('images/memory1.jpg');
+}
+
+.card2{
+    background-image:url('images/memory2.jpg');
+}
+
+.card3{
+    background-image:url('images/memory3.jpg');
+}
+
+.card4{
+    background-image:url('images/beach.jpg');
+}
+
+.memory-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,
+    rgba(2,6,23,0.95),
+    transparent);
+}
+
+.memory-content{
+    position:relative;
+    z-index:2;
+    padding:30px;
+}
+
+.memory-content h2{
+    margin-bottom:15px;
+    font-size:1.8rem;
+}
+
+.memory-content p{
+    color:#e2e8f0;
+    line-height:1.8;
+}
+
+.secret-section{
+    padding:120px 100px;
+    display:flex;
+    justify-content:center;
+}
+
+.secret-card{
+    width:100%;
+    max-width:900px;
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.06);
+    padding:60px;
+    border-radius:35px;
+    text-align:center;
+    backdrop-filter:blur(18px);
+}
+
+.secret-card h1{
+    font-size:3rem;
+    margin-bottom:25px;
+}
+
+.secret-card p{
+    line-height:2;
+    color:#cbd5e1;
+    font-size:1.1rem;
+}
+
+.secret-card button{
+    margin-top:35px;
+    padding:16px 34px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#020617;
+    font-size:1rem;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.4s;
+}
+
+.secret-card button:hover{
+    transform:scale(1.08);
+}
+
+.hidden-message{
+    margin-top:35px;
+    opacity:0;
+    transform:translateY(20px);
+    transition:0.8s;
+    line-height:2;
+    color:#f8fafc;
+}
+
+.hidden-message.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.final-section{
+    min-height:60vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+    padding:50px;
+}
+
+.final-section h1{
+    font-size:4rem;
+    background:linear-gradient(to right,#ffffff,#d8b4fe,#93c5fd);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.final-section p{
+    margin-top:20px;
+    color:#cbd5e1;
+}
+
+@media(max-width:1100px){
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-left h1{
+        font-size:4rem;
+    }
+
+    .hero-left p{
+        margin:auto;
+        margin-top:30px;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .timeline::before{
+        left:20px;
+    }
+
+    .timeline-item{
+        width:100%;
+        left:0 !important;
+        padding-left:70px;
+        text-align:left !important;
+    }
+
+    .timeline-dot{
+        left:11px !important;
+    }
+
+}
+
+@media(max-width:768px){
+
+    nav{
+        padding:20px 30px;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .hero{
+        padding:120px 30px;
+    }
+
+    .hero-left h1{
+        font-size:3rem;
+    }
+
+    .timeline-section,
+    .memories-section,
+    .secret-section{
+        padding:100px 30px;
+    }
+
+    .section-title{
+        font-size:2.7rem;
+    }
+
+    .secret-card{
+        padding:40px 25px;
+    }
+
+    .final-section h1{
+        font-size:2.8rem;
+    }
+
+}
         <li><a href="#final">Final</a></li>
 
     </ul>
