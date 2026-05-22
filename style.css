@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>10 Months With Shonamuniii 🤍</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="loader">
+
+    <div class="loader-content">
+
+        <h1>Shonamuniii 🤍</h1>
+
+        <p>Loading memories...</p>
+
+        <div class="loading-bar">
+            <span></span>
+        </div>
+
+    </div>
+
+</div>
+
+<canvas id="particles"></canvas>
+
+<nav>
+
+    <div class="logo">
+        Aashu ✨
+    </div>
+
+    <ul>
+
+        <li><a href="#home">Home</a></li>
+
+        <li><a href="#timeline">Timeline</a></li>
+
+        <li><a href="#memories">Memories</a></li>
+
+        <li><a href="#final">Final</a></li>
+
+    </ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+    <div class="overlay"></div>
+
+    <div class="hero-left">
+
+        <h1>
+            10 Months <br>
+            With <span>Shonamuniii</span>
+        </h1>
+
+        <p>
+
+            From 22 July to 22 May 🤍 <br>
+
+            10 months of memories, comfort,
+            random talks, late night calls,
+            beach moments and love.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <button id="exploreBtn">
+                Explore Memories
+            </button>
+
+            <button id="musicBtn">
+                Play Music
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+        <div class="glass-card">
+
+            <h2>Relationship Stats</h2>
+
+            <div class="stats-grid">
+
+                <div class="stat-box">
+
+                    <h3 id="daysCounter">304</h3>
+
+                    <p>Days Together</p>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h3>10</h3>
+
+                    <p>Months Completed</p>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h3>∞</h3>
+
+                    <p>Memories Made</p>
+
+                </div>
+
+                <div class="stat-box">
+
+                    <h3>1</h3>
+
+                    <p>Favorite Person</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="timeline-section" id="timeline">
+
+    <h1 class="section-title">
+        Our Timeline 🌙
+    </h1>
+
+    <div class="timeline">
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h2>22 July</h2>
+
+                <p>
+                    The day everything started.
+                    Two random souls slowly becoming important to each other.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h2>Late Night Talks</h2>
+
+                <p>
+                    Calls, random messages,
+                    comfort and overthinking together 😭
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h2>Beach Moments 🌊</h2>
+
+                <p>
+                    My favorite memories with you forever.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <div class="timeline-content">
+
+                <h2>22 May</h2>
+
+                <p>
+                    10 months completed with my favorite girl 🤍
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="memories-section" id="memories">
+
+    <h1 class="section-title">
+        Things I Love About You ✨
+    </h1>
+
+    <div class="memory-grid">
+
+        <div class="memory-card card1">
+
+            <div class="memory-overlay"></div>
+
+            <div class="memory-content">
+
+                <h2>Your Presence</h2>
+
+                <p>
+                    Somehow you make normal moments feel special.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="memory-card card2">
+
+            <div class="memory-overlay"></div>
+
+            <div class="memory-content">
+
+                <h2>Your Care</h2>
+
+                <p>
+                    The way you care and stay means more than you know.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="memory-card card3">
+
+            <div class="memory-overlay"></div>
+
+            <div class="memory-content">
+
+                <h2>Our Bond</h2>
+
+                <p>
+                    Rare, comforting and real.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="memory-card card4">
+
+            <div class="memory-overlay"></div>
+
+            <div class="memory-content">
+
+                <h2>Beach Memories 🌊</h2>
+
+                <p>
+                    Waves, peace and you 🤍
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="secret-section">
+
+    <div class="secret-card">
+
+        <h1>One More Thing...</h1>
+
+        <p>
+
+            This might have been a little emotional day for you
+            because I didn’t wish you from morning 😭
+
+            But I never forgot us.
+
+            I just wanted to surprise you properly
+            instead of sending a simple text.
+
+        </p>
+
+        <button id="secretBtn">
+            Click Me 🤍
+        </button>
+
+        <div class="hidden-message" id="hiddenMessage">
+
+            Thank you for these beautiful 10 months 🫶 <br><br>
+
+            And honestly... <br>
+
+            I still want more memories,
+            more late night talks,
+            more beach moments
+            and more time with you 🌙🤍
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="final-section" id="final">
+
+    <h1>
+        Happy 10 Months Shonamuniii 🤍
+    </h1>
+
+    <p>
+        Made with love by Aashu ✨
+    </p>
+
+</section>
+
+<audio id="bgMusic" loop>
+
+    <source src="music.mp3" type="audio/mp3">
+
+</audio>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
